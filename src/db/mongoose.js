@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const chalk = require("chalk");
+// const chalk = require("chalk");
 const MONGO_URL = process.env.MONGO_URL;
 
 mongoose
@@ -10,10 +10,10 @@ mongoose
     useFindAndModify: false
   })
   .then(() => {
-    return console.log(chalk.bgGreen("Connected To Database"));
+    return console.log("Connected To Database");
   })
   .catch(() => {
-    return console.log(chalk.bgRed("Unable to Connect To Database try Again"));
+    return console.log("Unable to Connect To Database try Again");
   });
 
 // mongoose.connect(MONGO_URL, {
