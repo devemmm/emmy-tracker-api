@@ -8,7 +8,7 @@ const trackRouter = require("./routes/trackRoute");
 const requireAuth = require("./middleware/requireAuth");
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 app.use(bodyPerser.json());
 app.use(authRoute);
